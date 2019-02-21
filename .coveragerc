@@ -1,7 +1,7 @@
 [run]
 branch = True
-source = shablona/*
-include = shablona/*
+source = MC/*
+include = MC/*
 omit = */setup.py
 [report]
-include = shablona/*
+include = MC/*
