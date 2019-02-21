@@ -17,8 +17,8 @@ import sys
 import os
 
 # General information about the project.
-project = 'MC'
-copyright = '2018, Mert Ozkan'
+project = 'shablona'
+copyright = '2015, Ariel Rokem'
 
 currentdir = os.path.abspath(os.path.dirname(__file__))
 ver_file = os.path.join(currentdir, '..', project, 'version.py')
@@ -76,7 +76,7 @@ sphinx_gallery_conf = {
     # path where to save gallery generated examples
     'gallery_dirs': 'auto_examples',
     # To auto-generate example sections in the API
-    'doc_module': ('MC',),
+    'doc_module': ('shablona',),
     # Auto-generated mini-galleries go here
     'backreferences_dir': 'gen_api'
 }
@@ -216,7 +216,7 @@ html_domain_indices = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MCdoc'
+htmlhelp_basename = 'shablonadoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -236,8 +236,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'MC.tex', 'MC Documentation',
-   'Mert Ozkan', 'manual'),
+  ('index', 'shablona.tex', 'shablona Documentation',
+   'Ariel Rokem', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -266,8 +266,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'MC', 'MC Documentation',
-     ['Mert Ozkan'], 1)
+    ('index', 'shablona', 'shablona Documentation',
+     ['Ariel Rokem'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -280,8 +280,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'MC', 'MC Documentation',
-   'Mert Ozkan', 'MC', 'One line description of project.',
+  ('index', 'shablona', 'shablona Documentation',
+   'Ariel Rokem', 'shablona', 'One line description of project.',
    'Miscellaneous'),
 ]
 
