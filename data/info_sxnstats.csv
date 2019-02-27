@@ -1,0 +1,19 @@
+# Session Information
+# Subject data is registered in "{sub_name}_subdatabhv.csv" files
+# sub_no, sub_name, bhv_ptr, eeg_ptr, qTrlRej, qTrl, qTrlVld, qTrlVldKey, qTrlVldRT
+1, MOz, mertozkan, MO, 33, 728, 640, 687, 648
+2, SA, sibelakyuz, SA, 47, 728, 605, 642, 644
+3, ZP, zp, ZP, 42, 811, 655, 680, 744
+4, AYO, ayo, AYO, 28, 721, 655, 692, 656
+5, BMU, bmu, BMU, 29, 726, 653, 691, 659
+6, ENC, ENC, ENC, 30, 737, 639, 693, 653
+7, PM, pm, pm, 23, 728, 667, 700, 672
+8, UK, UK, UK, 37, 730, 612, 684, 621
+9, MC, MC_7, 7-MC, 23, 738, 591, 697, 609
+10, AA, AA, AA, 10, 740, 682, 710, 702
+11, YA, YA, YA, 14, 726, 674, 706, 680
+12, PD, PD1, PD, 7, 734, 645, 713, 659
+13, AI, AIEEG, AI, 32, 738, 594, 689, 611
+14, ASA, ASA, ASA, 24, 739, 652, 696, 671
+15, HC, HCEEG, HC, 60, 843, 457, 666, 574
+16, BU, BU, BU3, 11, 722, 673, 709, 675

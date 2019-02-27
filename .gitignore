@@ -4,3 +4,8 @@
 _build/
 auto_examples/
 gen_api/
+*.vhdr
+*.vmrk
+*.dat
+.ipynb_checkpoints
+*-checkpoint.ipynb
