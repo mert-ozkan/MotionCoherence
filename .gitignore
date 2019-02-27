@@ -8,3 +8,4 @@ gen_api/
 *.vmrk
 *.dat
 *.ipynb_checkpoints
+*-checkpoint.ipynb
