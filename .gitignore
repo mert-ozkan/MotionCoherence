@@ -1,6 +1,5 @@
 *.py[co]
 idea
-check_StandardSyntax_MOz.ipynb
 *~
 *.DS_Store
 _build/
