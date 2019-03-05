@@ -1,5 +1,5 @@
 *.py[co]
-/.idea/
+*.idea
 check_StandardSyntax_MOz.ipynb
 *~
 *.DS_Store
@@ -9,5 +9,4 @@ gen_api/
 *.vhdr
 *.vmrk
 *.dat
-MC/.ipynb_checkpoints/
--checkpoint.ipynb
+*.ipynb_checkpoints
