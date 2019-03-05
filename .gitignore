@@ -1,4 +1,5 @@
 *.py[co]
+check_StandardSyntax_MOz.ipynb
 *~
 *.DS_Store
 _build/

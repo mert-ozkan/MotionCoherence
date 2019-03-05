@@ -1,211 +1,219 @@
 from __future__ import absolute_import, division, print_function
 import numpy as np
-import pandas as pd
-import scipy.optimize as opt
-from scipy.special import erf
-from .due import due, Doi
+import os
 
-__all__ = ["Model", "Fit", "opt_err_func", "transform_data", "cumgauss"]
-
-
-# Use duecredit (duecredit.org) to provide a citation to relevant work to
-# be cited. This does nothing, unless the user has duecredit installed,
-# And calls this with duecredit (as in `python -m duecredit script.py`):
-due.cite(Doi("10.1167/13.9.30"),
-         description="Template project for small scientific Python projects",
-         tags=["reference-implementation"],
-         path='MC')
+__all__ = ["import_psyphysdata_mc",
+           "importfromstandardcsv_moz",
+           "combineconditions_mc",
+           "array2tupleofvectors",
+           "findfilenameindirectory",
+           "import_subjectdatainfo_mc"]
 
 
-def transform_data(data):
+
+
+def import_psyphysdata_mc(f_name, path):
     """
-    Function that takes experimental data and gives us the
-    dependent/independent variables for analysis.
+    Feb 22, 2019
+    Mert Ozkan
+    Dartmouth College
+    Motion Coherence
 
-    Parameters
-    ----------
-    data : Pandas DataFrame or string.
-        If this is a DataFrame, it should have the columns `contrast1` and
-        `answer` from which the dependent and independent variables will be
-        extracted. If this is a string, it should be the full path to a csv
-        file that contains data that can be read into a DataFrame with this
-        specification.
+    Imports datasets from log files for the Motion Coherence experiment.
+    Usage: trl_no, dxn, coh, isOK, key, rt = import_psyphysdata_mc(f_name,path)
 
-    Returns
-    -------
-    x : array
-        The unique contrast differences.
-    y : array
-        The proportion of '2' answers in each contrast difference
-    n : array
-        The number of trials in each x,y condition
+    Invalid reactions are encoded as key = 0
     """
-    if isinstance(data, str):
-        data = pd.read_csv(data)
 
-    contrast1 = data['contrast1']
-    answers = data['answer']
+    dat_path = '/'.join([path, f_name])
+    f = open(dat_path, 'r')
 
-    x = np.unique(contrast1)
-    y = []
-    n = []
+    # Data log starts 2 lines after the data pointer
+    dat_ptr = '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%'
+    read_l = f.readlines()
+    for idx in range(len(read_l)):
+        if dat_ptr in read_l[idx]:
+            dat_start_idx = idx + 2
+            break
+    trl_no = []
+    dxn = []
+    coh = []
+    isOK = []
+    key = []
+    rt = []
+    for trl in read_l[dat_start_idx:]:
+        trl_dat = trl.split()
+        trl_no.append(int(trl_dat[0]))
+        dxn.append(int(trl_dat[1]))
+        coh.append(float(trl_dat[2]))
+        isOK.append(int(trl_dat[3]))
+        if trl_dat[4] == 'space' or trl_dat[4] == '-':
+            key.append(0)
+        else:
+            key.append(int(trl_dat[4]))
 
-    for c in x:
-        idx = np.where(contrast1 == c)
-        n.append(float(len(idx[0])))
-        answer1 = len(np.where(answers[idx[0]] == 1)[0])
-        y.append(answer1 / n[-1])
-    return x, y, n
+        rt.append(float(trl_dat[5]))
+
+    trl_no = np.array(trl_no)
+    dxn = np.array(dxn)
+    coh = np.array(coh)
+    isOK = np.array(isOK)
+    key = np.array(key)
+    rt = np.array(rt)
+    return trl_no, dxn, coh, isOK, key, rt
 
 
-def cumgauss(x, mu, sigma):
+def import_subjectdatainfo_mc(path):
     """
-    The cumulative Gaussian at x, for the distribution with mean mu and
-    standard deviation sigma.
+    Feb 22, 2019
+    Mert Ozkan
+    Dartmouth College
+    Motion Coherence
 
-    Parameters
-    ----------
-    x : float or array
-       The values of x over which to evaluate the cumulative Gaussian function
-
-    mu : float
-       The mean parameter. Determines the x value at which the y value is 0.5
-
-    sigma : float
-       The variance parameter. Determines the slope of the curve at the point
-       of Deflection
-
-    Returns
-    -------
-
-    g : float or array
-        The cumulative gaussian with mean $\\mu$ and variance $\\sigma$
-        evaluated at all points in `x`.
-
-    Notes
-    -----
-    Based on:
-    http://en.wikipedia.org/wiki/Normal_distribution#Cumulative_distribution_function
-
-    The cumulative Gaussian function is defined as:
-
-    .. math::
-
-        \\Phi(x) = \\frac{1}{2} [1 + erf(\\frac{x}{\\sqrt{2}})]
-
-    Where, $erf$, the error function is defined as:
-
-    .. math::
-
-        erf(x) = \\frac{1}{\\sqrt{\\pi}} \int_{-x}^{x} e^{t^2} dt
-
+    Import subject data inventory from data_inventory_mc.txt
+    Usage: sub_no, sub_name, sxn_sq, bhv_ptr, eeg_ptr, trl_rej_1, trl_rej_2 = import_subjectdatainfo_mc(path)
     """
-    return 0.5 * (1 + erf((x - mu) / (np.sqrt(2) * sigma)))
+
+    f = open(path, 'r')
+    read_l = f.readlines()
+
+    sub_no = []
+    sub_name = []
+    sxn_sq = []
+    bhv_ptr = []
+    eeg_ptr = []
+    trl_rej_1 = []
+    trl_rej_2 = []
+    for idx in range(len(read_l)):
+        if '*' in read_l[idx]:
+            inv_st = read_l[idx + 1].split('; ')
+            sub_no.append(int(inv_st[0]))
+            sub_name.append(inv_st[1])
+            sxn_sq.append(
+                np.array(inv_st[2].split(', ')).astype(int))
+            bhv_ptr.append(inv_st[3])
+            eeg_ptr.append(inv_st[4])
+            trl_rej_1.append(
+                np.array(inv_st[5].split(', ')).astype(int))
+            if inv_st[6][-1:] == '\n':
+                inv_st[6] = inv_st[6][:-1]
+            if inv_st[6] != '':
+                trl_rej_2.append(
+                    np.array(inv_st[6].split(', ')).astype(int))
+            else:
+                trl_rej_2.append(
+                    np.array([]).astype(int))
+    return sub_no, sub_name, sxn_sq, bhv_ptr, eeg_ptr, trl_rej_1, trl_rej_2
 
 
-def opt_err_func(params, x, y, func):
+def findfilenameindirectory(path, kw, numberoffiles=None, maxnumberoffiles=None, minnumberoffiles=None):
+
+    found = 0
+    contents = os.listdir(path)
+    subset_contents = contents
+    for whKW in kw:
+        contents = subset_contents
+        subset_contents = []
+        for whContent in contents:
+            if whKW in whContent:
+                found += 1
+                subset_contents.append(whContent)
+
+    assert not((numberoffiles is not None and numberoffiles != len(subset_contents)) or \
+           (maxnumberoffiles is not None and maxnumberoffiles < len(subset_contents)) or \
+           (minnumberoffiles is not None and minnumberoffiles > len(subset_contents))),\
+        f'''
+        File Quantity Mismatch! in findfilenameindirectory_mc()
+        Expected number of files: {numberoffiles}
+        Expected maximum number of files: {maxnumberoffiles}
+        Expected minimum number of files: {minnumberoffiles}
+        Number of files found: {len(subset_contents)}
+        Keywords: {kw}
+        Filenames: {subset_contents}
+        Path = {path}'''
+    return subset_contents
+
+
+def combineconditions_mc(whSub, sq, path):
+
+    conds_id = np.array(
+        ['translational.log', 'rotational.log', 'radial.log'])  # The index corresponding to the condition number
+    conds_sq = conds_id[sq]
+
+    prev_sxn_trl_no = 0
+    prev_trl_no = np.array([])
+    prev_dxn = np.array([])
+    prev_coh = np.array([])
+    prev_isOK = np.array([])
+    prev_key = np.array([])
+    prev_rt = np.array([])
+    prev_cond_arr = np.array([])
+
+    for cond in conds_sq:
+        f_name = findfilenameindirectory(path, [whSub, cond], numberoffiles=1)
+        assert len(f_name) == 1, f'''
+            No unique file for '{whSub}' and {cond}
+            <combineconditions_mc>
+            '''
+        trl_no, dxn, coh, isOK, key, rt = import_psyphysdata_mc(f_name[0], path)
+
+        cond_arr = np.array(
+            [np.where(
+                conds_id == cond
+            )] * len(trl_no)
+        )
+        trl_no += prev_sxn_trl_no
+        prev_sxn_trl_no = trl_no[-1]
+
+        prev_trl_no = np.concatenate((prev_trl_no, trl_no), axis=None)
+        prev_cond_arr = np.concatenate((prev_cond_arr, cond_arr), axis=None)
+        prev_dxn = np.concatenate((prev_dxn, dxn), axis=None)
+        prev_coh = np.concatenate((prev_coh, coh), axis=None)
+        prev_isOK = np.concatenate((prev_isOK, isOK), axis=None)
+        prev_key = np.concatenate((prev_key, key), axis=None)
+        prev_rt = np.concatenate((prev_rt, rt), axis=None)
+
+    return prev_trl_no, prev_cond_arr, prev_dxn, prev_coh, prev_isOK, prev_key, prev_rt
+
+
+def importfromstandardcsv_moz(path, whType='str'):
     """
-    Error function for fitting a function using non-linear optimization.
-
-    Parameters
-    ----------
-    params : tuple
-        A tuple with the parameters of `func` according to their order of
-        input
-
-    x : float array
-        An independent variable.
-
-    y : float array
-        The dependent variable.
-
-    func : function
-        A function with inputs: `(x, *params)`
-
-    Returns
-    -------
-    float array
-        The marginals of the fit to x/y given the params
+    Imports data from .csv files in the following format.
+    The format of the file should follow the rules below:
+        1. Lines starting with '#' are ignored. A description of the file should be given here.
+        2. If data contains a list:
+            a. Elements should be separated with space.
+            b. The function will return the list as a string without characters '[' or ']'.
     """
-    return y - func(x, *params)
+
+    if whType not in ['str', 'float', 'int', 'bool']:
+        print('''whType should be equal to one of the following: 'str', 'float', 'int','bool''')
+
+    f = open(path, 'r')
+
+    f_l = f.readlines()
+
+    dat = []
+    for l in f_l:
+        if l[0] != '#':
+            trl = l.split(', ')
+            for idx in range(len(trl)):
+                for spcl_char in ['\n', '[', ']']:
+                    if spcl_char in trl[idx]:
+                        if spcl_char == '[' and whType != 'str':
+                            whType = 'str'
+                            print(f'''
+                            The file contains a list. Therefore, the output will be returned as type string!
+                            filename: {path}''')
+                        trl[idx] = trl[idx].replace('\n', '')
+            dat.append(trl)
+    dat = np.array(dat).astype(whType)
+    return dat
 
 
-class Model(object):
-    """Class for fitting cumulative Gaussian functions to data"""
-    def __init__(self, func=cumgauss):
-        """ Initialize a model object.
+def array2tupleofvectors(arr):
+    col = []
+    for whCol in range(arr.shape[1]):
+        col.append(arr[:, whCol])
+    return tuple(col)
 
-        Parameters
-        ----------
-        data : Pandas DataFrame
-            Data from a subjective contrast judgement experiment
-
-        func : callable, optional
-            A function that relates x and y through a set of parameters.
-            Default: :func:`cumgauss`
-        """
-        self.func = func
-
-    def fit(self, x, y, initial=[0.5, 1]):
-        """
-        Fit a Model to data.
-
-        Parameters
-        ----------
-        x : float or array
-           The independent variable: contrast values presented in the
-           experiment
-        y : float or array
-           The dependent variable
-
-        Returns
-        -------
-        fit : :class:`Fit` instance
-            A :class:`Fit` object that contains the parameters of the model.
-
-        """
-        params, _ = opt.leastsq(opt_err_func, initial,
-                                args=(x, y, self.func))
-        return Fit(self, params)
-
-
-class Fit(object):
-    """
-    Class for representing a fit of a model to data
-    """
-    def __init__(self, model, params):
-        """
-        Initialize a :class:`Fit` object.
-
-        Parameters
-        ----------
-        model : a :class:`Model` instance
-            An object representing the model used
-
-        params : array or list
-            The parameters of the model evaluated for the data
-
-        """
-        self.model = model
-        self.params = params
-
-    def predict(self, x):
-        """
-        Predict values of the dependent variable based on values of the
-        indpendent variable.
-
-        Parameters
-        ----------
-        x : float or array
-            Values of the independent variable. Can be values presented in
-            the experiment. For out-of-sample prediction (e.g. in
-            cross-validation), these can be values
-            that were not presented in the experiment.
-
-        Returns
-        -------
-        y : float or array
-            Predicted values of the dependent variable, corresponding to
-            values of the independent variable.
-        """
-        return self.model.func(x, *self.params)

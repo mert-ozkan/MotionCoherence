@@ -1,0 +1,97 @@
+## Glossary of Variable Names:
+# var_abv, var_name/altVarName, type, cont_type=var_type
+#
+# Abreviation Types:
+    # vn: variable name
+        # Multiple variable names come together with '_'
+        # Numbers denote for rank or quantity, always in the end of the variable name.
+            # Legal use: vn1, vn1_vn2, vn1_vn2_3
+            # Illegal use: vn_1, vn_1_vn1, vn1_1_vn2, vn1_1vn2
+#
+    # pf: prefix, usage: preVn
+        # Cannot be used as a variable name alone
+        # Always in the beginning of a variable
+        # Each variable name pertaining to a prefix starts with capital letters, and without an underscore
+            # Illegal use: pf_vn1_vn2, pref_Vn1_Vn2
+            # Legal use: pfVn1Vn2
+        # Example: pref 'is' makes a question
+        # lst_st: list_string, isLstSt: is it a list of strings
+#
+    # ptr: pointer, usage: vn1_mc
+        # Only in the very end of variable names, separated with an underscore
+        # Cannot be used with prefixes
+        # No more than one ptr in a variable name
+        # It usually points out to a folder, experiment, or a person.
+            # Example: thisfunction_mc: thisfunction is created for and mainly used in Motion Coherence experiment
+            # Illegal use: ptr_vn, vn1_ptr_vn2, ptrVN, VN_ptr
+            # Legal use: vn_ptr, vn1_vn2_ptr            
+        # Warning: 'ptr' can be used as a variable name.
+#
+    # prepos: preposition
+        # Cannot be used alone
+        # Always merged before only one variable name
+        # The variable name pertaining to a prefix starts with capital letters
+        # Not allowed to be used with a ptr
+            # Example: dist_deCent_inDeg: distance from the center in degrees, isInDeg: is it in degrees
+            # Legal Use: preposVn, vn1_preposVn2, pfVn1PreposVn2, vn1_preposVn2_vn3
+            # Illegal Use: prepos_vn, preposVn1Vn2, preposVn1_Vn2, vn1_preposVn2_Vn3
+
+* pf, prefix, vn
+* nm, name, vn
+* var, variable, vn
+* alt, alternative/option, pf
+* ans, answer, vn
+* op, output, vn
+* abv, abbreviation, vn
+* moz, mert_ozkan, ptr
+* mc, motion_coherence, ptr
+* f, file, vn
+* dat, data, vn
+* l, line, vn
+* idx, index, vn
+* ptr, pointer, vn
+* trl, trial, vn
+* no, number_ordinal/rank, vn
+* num, number_quantitative, vn
+* dxn, direction, vn
+* coh, coherence, vn
+* ok, correct, vn
+* is, question_prefix, pf, bool
+* islst, list_for_prefix_is, vn
+* cont, content, vn
+* rt, reaction_time, vn
+* t, time, vn
+* st, string, vn
+* i, integer, vn
+* stc, sentence, vn
+* wrd, word, vn
+* inv, inventory, vn
+* cond, condition, vn
+* sq, order/sequence, vn
+* sxn, session, vn
+* rej, rejected, vn
+* sub, subject/participant, vn
+* w, with, prepos
+* in, in/inside, prepos
+* per, per/for, prepos
+* de, from/of, prepos
+* wh, which/what, pf
+* pre, before, prepos
+* post, after, prepos
+* prev, previous, vn
+* nxt, next, vn
+* pc, percent/percentage, vn
+* dr, directory, vn
+* arr, array, vn
+* kw, keyword, vn
+* q, quantity/number, pf
+* avg, average/mean, vn
+* sd, std/standard deviation, vn
+* rxn, reaction/response, vn
+* lvl, level, vn
+* spcl, special, vn
+* lst, list, vn
+* el, element, vn
+* char, character, vn
+* desc, description, vn
+* tip, type, vn
