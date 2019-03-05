@@ -57,12 +57,13 @@
 * coh, coherence, vn
 * ok, correct, vn
 * is, question_prefix, pf, bool
-* islst, list_for_prefix_is, vn
+* islst, list_for_prefix_is, vn, bool
 * cont, content, vn
 * rt, reaction_time, vn
 * t, time, vn
-* st, string, vn
-* i, integer, vn
+* st, string/str, vn, str
+* i, integer/int, vn, int
+* flt, float/floating_number, vn, float
 * stc, sentence, vn
 * wrd, word, vn
 * inv, inventory, vn
@@ -90,8 +91,13 @@
 * rxn, reaction/response, vn
 * lvl, level, vn
 * spcl, special, vn
-* lst, list, vn
+* lst, list, vn, list
 * el, element, vn
 * char, character, vn
 * desc, description, vn
 * tip, type, vn
+* std, standard, vn
+* syn, syntax, vn
+* gloss, glossary, vn
+* err, error, vn
+* tup, tuple, vn, tuple
