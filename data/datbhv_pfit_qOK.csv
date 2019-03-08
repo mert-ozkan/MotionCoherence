@@ -1,5 +1,5 @@
-# Data for Psychophysical Curve Fitting
-# sub_no, mot, coh, qOK, qTrl
+# Data for Gumbel (qOk) Psychophysical Curve Fitting
+# sub_no, mot, coh, qOk, qTrl
 1, 0.0, 0.05, 15.0, 32
 1, 0.0, 0.15, 29.0, 37
 1, 0.0, 0.3, 34.0, 34

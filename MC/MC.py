@@ -48,7 +48,7 @@ def import_psyphysdata_mc(f_name, path):
         coh.append(float(trl_dat[2]))
         isOK.append(int(trl_dat[3]))
         if trl_dat[4] == 'space' or trl_dat[4] == '-':
-            key.append(0)
+            key.append(-2)
         else:
             key.append(int(trl_dat[4]))
 
@@ -156,6 +156,11 @@ def combineconditions_mc(whSub, sq, path):
             <combineconditions_mc>
             '''
         trl_no, dxn, coh, isOK, key, rt = import_psyphysdata_mc(f_name[0], path)
+
+        dxn[dxn == 180] = 1
+        dxn[dxn == 0] = -1
+        key[np.logical_or(key == 4, key == 8)] = 1
+        key[np.logical_or(key == 6, key == 2)] = 0
 
         cond_arr = np.array(
             [np.where(
