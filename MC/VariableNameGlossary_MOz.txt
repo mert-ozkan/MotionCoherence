@@ -35,11 +35,15 @@
             # Example: dist_deCent_inDeg: distance from the center in degrees, isInDeg: is it in degrees
             # Legal Use: preposVn, vn1_preposVn2, pfVn1PreposVn2, vn1_preposVn2_vn3
             # Illegal Use: prepos_vn, preposVn1Vn2, preposVn1_Vn2, vn1_preposVn2_Vn3
+#
+    # Numbers: 123456789....N
 
 * pf, prefix, vn
 * nm, name, vn
+* val, value, vn
 * var, variable, vn
-* alt, alternative/option, pf
+* opt, alternative/option, pf
+* alt, altair, vn
 * ans, answer, vn
 * op, output, vn
 * abv, abbreviation, vn
@@ -51,18 +55,24 @@
 * idx, index, vn
 * ptr, pointer, vn
 * trl, trial, vn
+* pt, point, vn
 * no, number_ordinal/rank, vn
 * num, number_quantitative, vn
 * dxn, direction, vn
+* curr, current, pf
 * coh, coherence, vn
 * ok, correct, vn
 * is, question_prefix, pf, bool
-* islst, list_for_prefix_is, vn
+* islst, list_for_prefix_is, vn, bool
 * cont, content, vn
+* it, item, vn
 * rt, reaction_time, vn
 * t, time, vn
-* st, string, vn
-* i, integer, vn
+* ppl, population/sample/people, vn
+* gru, group, vn
+* st, string/str, vn, str
+* i, integer/int, vn, int
+* flt, float/floating_number, vn, float
 * stc, sentence, vn
 * wrd, word, vn
 * inv, inventory, vn
@@ -78,7 +88,7 @@
 * wh, which/what, pf
 * pre, before, prepos
 * post, after, prepos
-* prev, previous, vn
+* prev, previous, pf
 * nxt, next, vn
 * pc, percent/percentage, vn
 * dr, directory, vn
@@ -90,8 +100,13 @@
 * rxn, reaction/response, vn
 * lvl, level, vn
 * spcl, special, vn
-* lst, list, vn
+* lst, list, vn, list
 * el, element, vn
 * char, character, vn
 * desc, description, vn
 * tip, type, vn
+* std, standard, vn
+* syn, syntax, vn
+* gloss, glossary, vn
+* err, error, vn
+* tup, tuple, vn, tuple
