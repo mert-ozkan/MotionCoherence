@@ -1,14 +1,14 @@
 # 
-#                  Behavioural Data Log:
-#                  
-#                  All trials match to the eeg trials.
-#                  Valid trials are marked.
-#                  
-#                  Subject Initials: sub_name = UK
-#                  Subject Number: sub_no = 8
-#                  
-#                  trl_no, sxn_sq, dxn, coh, key, isOK, rt, isVld_key, isVld_rt
-#                  
+#                      Behavioural Data Log:
+# 
+#                      All trials match to the eeg trials.
+#                      Valid trials are marked.
+# 
+#                      Subject Initials: sub_name = UK
+#                      Subject Number: sub_no = 8
+# 
+#                      trl_no, sxn_sq, dxn, coh, key, isOK, rt, isVld_key, isVld_rt
+#                      
 1.00000e+00, 0.00000e+00, -1.00000e+00, 5.00000e-01, -2.00000e+00, -2.00000e+00, 2.00000e+00, 0.00000e+00, 1.00000e+00
 2.00000e+00, 0.00000e+00, 1.00000e+00, 5.00000e-02, -2.00000e+00, -2.00000e+00, 2.00000e+00, 0.00000e+00, 1.00000e+00
 3.00000e+00, 0.00000e+00, 1.00000e+00, 3.00000e-01, 1.00000e+00, 1.00000e+00, 4.94624e-01, 1.00000e+00, 1.00000e+00

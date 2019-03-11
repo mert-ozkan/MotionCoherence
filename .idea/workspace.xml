@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ba7c3cc-4bc9-453f-b860-1258f31e7724" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MC/.ipynb_checkpoints/MC - Workflow-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/MC/.ipynb_checkpoints/MC - Workflow-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MC/MC - Workflow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/MC/MC - Workflow.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MC/MC.py" beforeDir="false" afterPath="$PROJECT_DIR$/MC/MC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MC/VariableNameGlossary_MOz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MC/VariableNameGlossary_MOz.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MC/MC.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MC/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/MC/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MC/data_inventory_mc.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MC/psyphysfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/MC/psyphysfit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AA_subdatbhv.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/AI_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AI_subdatbhv.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ASA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ASA_subdatbhv.csv" afterDir="false" />
@@ -23,8 +27,10 @@
       <change beforePath="$PROJECT_DIR$/data/UK_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/UK_subdatbhv.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/YA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/YA_subdatbhv.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/ZP_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ZP_subdatbhv.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/datbhv_pfit.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dat_dePsyPhysFit_MC.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/dat_dePsyPhysFit_MC.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datbhv_pfit_qKey1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/datbhv_pfit_qKey1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datbhv_pfit_qOK.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/datbhv_pfit_qOK.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/info_trials.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/info_trials.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,40 +39,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MC/MC.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MC/psyphysfit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/psyFunction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,6 +54,7 @@
       <find>spac</find>
       <find>devia</find>
       <find>devian</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,6 +67,8 @@
         <option value="/anaconda3/lib/python3.7/site-packages/bayesfit/extractMetrics.py" />
         <option value="$PROJECT_DIR$/MC/sketch.py" />
         <option value="$PROJECT_DIR$/MC/PsyPhysCurveFit.py" />
+        <option value="$PROJECT_DIR$/MC/__init__.py" />
+        <option value="$PROJECT_DIR$/MC/MotionCoherence.py" />
         <option value="$PROJECT_DIR$/MC/psyphysfit.py" />
       </list>
     </option>
@@ -208,18 +184,18 @@
       <updated>1551744253731</updated>
       <workItem from="1551744256195" duration="1700000" />
       <workItem from="1551922942419" duration="2846000" />
-      <workItem from="1551997582034" duration="2006000" />
+      <workItem from="1551997582034" duration="2716000" />
+      <workItem from="1552266243539" duration="2775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6552000" />
+    <option name="totallyTimeSpent" value="10037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -234,7 +210,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32907802" />
-      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -263,22 +239,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MC/sketch.py">
+    <entry file="file://$PROJECT_DIR$/MC/sketch.py" />
+    <entry file="file://$PROJECT_DIR$/MC/PsyPhysCurveFit.py" />
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/plot_psyFcn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        <state relative-caret-position="-1404" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.7/site-packages/altair/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/venv/lib/python3.7/site-packages/altair/sphinxext/altairplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4194" />
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/psyFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MC/PsyPhysCurveFit.py">
+    <entry file="file://$PROJECT_DIR$/MC/tests/test_MC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="-1314">
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MC/MC.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -289,22 +282,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/plot_psyFcn.py">
+    <entry file="file://$PROJECT_DIR$/MC/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1404" />
-      </provider>
-    </entry>
-    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/psyFunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MC/psyphysfit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+        <state relative-caret-position="1950">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC/MotionCoherence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="300" column="42" selection-start-line="300" selection-start-column="42" selection-end-line="300" selection-end-column="42" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>

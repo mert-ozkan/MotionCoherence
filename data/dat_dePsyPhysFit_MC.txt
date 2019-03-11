@@ -41,7 +41,7 @@
    },
    "Estimate": {
       "Sub1": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -2064,7 +2064,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -4087,7 +4087,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -6112,7 +6112,7 @@
          }
       },
       "Sub2": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -8135,7 +8135,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -10158,7 +10158,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -12183,7 +12183,7 @@
          }
       },
       "Sub3": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -14206,7 +14206,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -16229,7 +16229,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -18254,7 +18254,7 @@
          }
       },
       "Sub4": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -20277,7 +20277,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -22300,7 +22300,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -24325,7 +24325,7 @@
          }
       },
       "Sub5": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -26348,7 +26348,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -28371,7 +28371,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -30396,7 +30396,7 @@
          }
       },
       "Sub6": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -32419,7 +32419,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -34442,7 +34442,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -36467,7 +36467,7 @@
          }
       },
       "Sub7": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -38490,7 +38490,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -40513,7 +40513,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -42538,7 +42538,7 @@
          }
       },
       "Sub8": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -44561,7 +44561,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -46584,7 +46584,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -48609,7 +48609,7 @@
          }
       },
       "Sub9": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -50632,7 +50632,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -52655,7 +52655,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -54680,7 +54680,7 @@
          }
       },
       "Sub10": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -56703,7 +56703,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -58726,7 +58726,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -60751,7 +60751,7 @@
          }
       },
       "Sub11": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -62774,7 +62774,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -64797,7 +64797,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -66822,7 +66822,7 @@
          }
       },
       "Sub12": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -68845,7 +68845,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -70868,7 +70868,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -72893,7 +72893,7 @@
          }
       },
       "Sub13": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -74916,7 +74916,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -76939,7 +76939,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -78964,7 +78964,7 @@
          }
       },
       "Sub14": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -80987,7 +80987,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -83010,7 +83010,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -85035,7 +85035,7 @@
          }
       },
       "Sub15": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -87058,7 +87058,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -89081,7 +89081,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -91106,7 +91106,7 @@
          }
       },
       "Sub16": {
-         "Tr": {
+         "Translational": {
             "est": {
                "x": [
                   0.0,
@@ -93129,7 +93129,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ra": {
+         "Radial": {
             "est": {
                "x": [
                   0.0,
@@ -95152,7 +95152,7 @@
                "est_x_precision": 1000
             }
          },
-         "Ro": {
+         "Rotational": {
             "est": {
                "x": [
                   0.0,
@@ -97179,7 +97179,7 @@
    },
    "Data": {
       "Sub1": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97205,7 +97205,7 @@
                35.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97231,7 +97231,7 @@
                36.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97259,7 +97259,7 @@
          }
       },
       "Sub2": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97285,7 +97285,7 @@
                26.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97311,7 +97311,7 @@
                34.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97339,7 +97339,7 @@
          }
       },
       "Sub3": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97365,7 +97365,7 @@
                37.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97391,7 +97391,7 @@
                39.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97419,7 +97419,7 @@
          }
       },
       "Sub4": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97445,7 +97445,7 @@
                37.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97471,7 +97471,7 @@
                38.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97499,7 +97499,7 @@
          }
       },
       "Sub5": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97525,7 +97525,7 @@
                38.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97551,7 +97551,7 @@
                38.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97579,7 +97579,7 @@
          }
       },
       "Sub6": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97605,7 +97605,7 @@
                40.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97631,7 +97631,7 @@
                39.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97659,7 +97659,7 @@
          }
       },
       "Sub7": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97685,7 +97685,7 @@
                39.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97711,7 +97711,7 @@
                37.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97739,7 +97739,7 @@
          }
       },
       "Sub8": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97765,7 +97765,7 @@
                35.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97791,7 +97791,7 @@
                33.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97819,7 +97819,7 @@
          }
       },
       "Sub9": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97845,7 +97845,7 @@
                36.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97871,7 +97871,7 @@
                31.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97899,7 +97899,7 @@
          }
       },
       "Sub10": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97925,7 +97925,7 @@
                38.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -97951,7 +97951,7 @@
                40.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -97979,7 +97979,7 @@
          }
       },
       "Sub11": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98005,7 +98005,7 @@
                37.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98031,7 +98031,7 @@
                40.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98059,7 +98059,7 @@
          }
       },
       "Sub12": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98085,7 +98085,7 @@
                37.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98111,7 +98111,7 @@
                38.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98139,7 +98139,7 @@
          }
       },
       "Sub13": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98165,7 +98165,7 @@
                33.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98191,7 +98191,7 @@
                28.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98219,7 +98219,7 @@
          }
       },
       "Sub14": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98245,7 +98245,7 @@
                37.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98271,7 +98271,7 @@
                37.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98299,7 +98299,7 @@
          }
       },
       "Sub15": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98325,7 +98325,7 @@
                17.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98351,7 +98351,7 @@
                36.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98379,7 +98379,7 @@
          }
       },
       "Sub16": {
-         "Tr": {
+         "Translational": {
             "Intensity": [
                0.05,
                0.15,
@@ -98405,7 +98405,7 @@
                39.0
             ]
          },
-         "Ra": {
+         "Radial": {
             "Intensity": [
                0.05,
                0.15,
@@ -98431,7 +98431,7 @@
                40.0
             ]
          },
-         "Ro": {
+         "Rotational": {
             "Intensity": [
                0.05,
                0.15,

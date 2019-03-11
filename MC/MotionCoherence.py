@@ -10,9 +10,7 @@ __all__ = ["import_psyphysdata_mc",
            "import_subjectdatainfo_mc"]
 
 
-
-
-def import_psyphysdata_mc(f_name, path):
+def import_psyphysdata_mc(dat_path):
     """
     Feb 22, 2019
     Mert Ozkan
@@ -24,8 +22,6 @@ def import_psyphysdata_mc(f_name, path):
 
     Invalid reactions are encoded as key = 0
     """
-
-    dat_path = '/'.join([path, f_name])
     f = open(dat_path, 'r')
 
     # Data log starts 2 lines after the data pointer
@@ -155,7 +151,9 @@ def combineconditions_mc(whSub, sq, path):
             No unique file for '{whSub}' and {cond}
             <combineconditions_mc>
             '''
-        trl_no, dxn, coh, isOK, key, rt = import_psyphysdata_mc(f_name[0], path)
+
+        f_path = os.path.join(path, f_name[0])
+        trl_no, dxn, coh, isOK, key, rt = import_psyphysdata_mc(f_path)
 
         dxn[dxn == 180] = 1
         dxn[dxn == 0] = -1
@@ -212,6 +210,7 @@ def importfromstandardcsv_moz(path, whType='str'):
                             filename: {path}''')
                         trl[idx] = trl[idx].replace('\n', '')
             dat.append(trl)
+
     dat = np.array(dat).astype(whType)
     return dat
 
@@ -222,3 +221,144 @@ def array2tupleofvectors(arr):
         col.append(arr[:, whCol])
     return tuple(col)
 
+
+def synchronize_behavioural_data_mc(dat_path):
+    dat_inv = import_subjectdatainfo_mc(os.path.join(dat_path,'data_inventory_mc.txt'))
+    sub_no, sub_name, sxn_sq, bhv_ptr, eeg_ptr, trl_rej_1, trl_rej_2 = dat_inv
+
+    f_info = open(os.path.join(dat_path,'info_sxnstats.csv'),'w')
+    f_info.write(
+        '''# Session Information\n# Subject data is registered in "{sub_name}_subdatabhv.csv" files\n# sub_no, sub_name, bhv_ptr, eeg_ptr, qTrlRej, qTrl, qTrlVld, qTrlVldKey, qTrlVldRT\n''')
+
+
+    for idx in range(len(sub_no)):
+        sub_dat = combineconditions_mc(bhv_ptr[idx], sxn_sq[idx]-1, dat_path)
+        trl_no, cond, dxn, coh, isOK, key, rt = sub_dat
+
+        qTrl = len(trl_no)
+        qTrlRej = len(trl_rej_1[idx])+len(trl_rej_2[idx])
+
+        # Mark validity
+
+        vld_key = key != -2
+
+        dat = np.matrix([trl_no, cond, dxn, coh, key, isOK, rt, vld_key])
+        dat = np.delete(dat,trl_rej_1[idx]-1,1)
+        dat = np.delete(dat,trl_rej_2[idx]-1,1)
+
+        vld_key_post_rej = dat[7].astype(bool)
+        rt_post_rej = dat[6]
+        rt_avg = np.mean(rt_post_rej[vld_key_post_rej])
+        rt_sd = np.std(rt_post_rej[vld_key_post_rej])
+
+        # Implement reaction time criteria
+        vld_rt = np.logical_and((rt_post_rej <= (rt_avg + 2*rt_sd)),(rt_post_rej >= (rt_avg - 2*rt_sd)))
+        vld_rt = np.logical_and((rt_post_rej > .1), vld_rt)
+
+        # Separate trials with valid reaction keys from trials with valid reaction times
+        vld_rt = np.logical_or(
+            np.logical_not(vld_key_post_rej),vld_rt
+        )
+
+        qTrlVldKey = np.sum(vld_key_post_rej)
+        qTrlVldRT = np.sum(vld_rt)
+        qTrlVld = np.sum(np.logical_and(vld_key_post_rej,vld_rt))
+
+        dat  = np.concatenate(
+            (dat,vld_rt), axis=0
+        )
+
+        dat_info = qTrl, qTrlRej, qTrlVldKey, qTrlVldRT, qTrlVld
+
+        assert len(trl_no)-(len(trl_rej_1[idx])+len(trl_rej_2[idx])) == dat.shape[1],\
+        '''
+        The number of trials do not match with the information in the data inventory!
+        Subject Number: {}
+        '''.format(n+1)
+
+        f_name = os.path.join(dat_path,'{}_subdatbhv.csv'.format(sub_name[idx]))
+        dat = np.transpose(dat)
+
+        np.savetxt(f_name,
+                     dat, delimiter = ', ',
+                     header = '''
+                     Behavioural Data Log:
+
+                     All trials match to the eeg trials.
+                     Valid trials are marked.
+
+                     Subject Initials: sub_name = {}
+                     Subject Number: sub_no = {}
+
+                     trl_no, sxn_sq, dxn, coh, key, isOK, rt, isVld_key, isVld_rt
+                     '''.format(sub_name[idx], sub_no[idx]
+                               ), fmt='%1.5e')
+        f_info.write('''{}, {}, {}, {}, {}, {}, {}, {}, {}\n'''.format(
+            sub_no[idx], sub_name[idx], bhv_ptr[idx], eeg_ptr[idx], qTrlRej, qTrl, qTrlVld, qTrlVldKey, qTrlVldRT)
+                    )
+    f_info.close()
+
+def create_data_forPsyPhysFit_mc(dat_path):
+
+    info = importfromstandardcsv_moz(os.path.join(dat_path,'info_sxnstats.csv'))
+
+    f_name_dat_ok = os.path.join(dat_path,'datbhv_pfit_qOK.csv')
+    f_dat_ok = open(f_name_dat_ok,'w')
+    f_dat_ok.write('''# Data for Psychophysical Curve Fitting
+    # sub_no, mot, coh, qOk, qTrl
+    ''')
+
+    f_name_dat_key1 = os.path.join(dat_path,'datbhv_pfit_qKey1.csv')
+    f_dat_key1 = open(f_name_dat_key1,'w')
+    f_dat_key1.write('''# Data for Psychophysical Curve Fitting
+    # sub_no, mot, coh, qKey1, qTrl
+    ''')
+    f_name_info = os.path.join(dat_path,'info_trials.csv')
+    f_info = open(f_name_info,'w')
+    f_info.write('''# Information for Correct and Valid Trial Indices per Each Subject
+    # to be used while matching eeg trials
+    # sub_no, trl_vld, trl_ok
+    ''')
+
+    for sub in info:
+        sub_no = sub[0]
+        sub_ptr = sub[1]
+        dat =  importfromstandardcsv_moz(os.path.join(dat_path,'{}_subdatbhv.csv'.format(sub_ptr)),
+                                         whType='float')
+        trl_no, mot, dxn, coh, key, isOK, rt, isVld_key, isVld_rt = array2tupleofvectors(dat)
+        dxn_coh = dxn*coh
+
+        isVld = np.logical_and(isVld_key, isVld_rt)
+
+        trl_ok = np.where(isOK)[0]
+        trl_vld = np.where(isVld)[0]
+        f_info.write('{}, {}, {}\n'.format(sub_no, trl_vld, trl_ok))
+        for whMot in np.unique(mot): # 0 1 2: Tr Ra Ro
+            for whCoh in np.unique(coh):
+                curr_cond = np.logical_and(
+                    np.logical_and(
+                        np.equal(mot,whMot), np.equal(coh,whCoh)
+                    ), isVld
+                )
+
+                qTrl = np.sum(curr_cond)
+                qOK = np.sum(isOK[curr_cond])
+
+
+                f_dat_ok.write('{}, {}, {}, {}, {}\n'.format(sub_no, whMot, whCoh, qOK, qTrl))
+
+            for whCoh in np.unique(dxn_coh):
+                curr_cond = np.logical_and(
+                    np.logical_and(
+                        np.equal(mot,whMot), np.equal(dxn_coh,whCoh)
+                    ), isVld
+                )
+
+                qTrl = np.sum(curr_cond)
+                qKey1 = np.sum(key[curr_cond])
+
+
+                f_dat_key1.write('{}, {}, {}, {}, {}\n'.format(sub_no, whMot, whCoh, qKey1, qTrl))
+
+    f_dat_ok.close()
+    f_info.close()
