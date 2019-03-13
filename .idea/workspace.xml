@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ba7c3cc-4bc9-453f-b860-1258f31e7724" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MC/.ipynb_checkpoints/MC - Workflow-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/MC/.ipynb_checkpoints/MC - Workflow-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MC/MC - Workflow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/MC/MC - Workflow.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MC/MC.py" beforeDir="false" afterPath="$PROJECT_DIR$/MC/MC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/datbhv_pfit.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/datbhv_pfit.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/info_trials.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/info_trials.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MC/VariableNameGlossary_MOz.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MC/VariableNameGlossary_MOz.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AA_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AI_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AI_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ASA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ASA_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/AYO_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/AYO_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BMU_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BMU_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/BU_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/BU_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ENC_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ENC_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/HC_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/HC_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MC_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/MC_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MOz_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/MOz_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PD_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/PD_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/PM_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/PM_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/SA_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/UK_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/UK_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/YA_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/YA_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ZP_subdatbhv.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ZP_subdatbhv.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/datbhv_pfit.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,12 +33,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MC/MC.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="205" column="45" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
+            <state>
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -31,7 +45,43 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MC/psyphysfit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/psyFunction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>space</find>
+      <find>spac</find>
+      <find>devia</find>
+      <find>devian</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,10 +90,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MC/MC.py" />
+        <option value="/anaconda3/lib/python3.7/site-packages/bayesfit/extractMetrics.py" />
+        <option value="$PROJECT_DIR$/MC/sketch.py" />
+        <option value="$PROJECT_DIR$/MC/PsyPhysCurveFit.py" />
+        <option value="$PROJECT_DIR$/MC/psyphysfit.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="797" />
@@ -114,6 +168,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="sketch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MotionCoherence" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MC/sketch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sketch" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,26 +206,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551744253731</updated>
-      <workItem from="1551744256195" duration="1638000" />
+      <workItem from="1551744256195" duration="1700000" />
+      <workItem from="1551922942419" duration="2846000" />
+      <workItem from="1551997582034" duration="2006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1638000" />
+    <option name="totallyTimeSpent" value="6552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="1" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Python Console" visible="true" weight="0.32907802" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -152,24 +229,82 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" x="0" y="0" width="310" height="597" id="Documentation" side_tool="true" weight="0.3297568" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32907802" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32907802" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" x="0" y="0" width="310" height="597" id="Documentation" order="6" side_tool="true" visible="true" weight="0.3297568" />
+      <window_info anchor="right" id="Database" order="7" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/bayesfit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/extractMetrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC/sketch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC/PsyPhysCurveFit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MC/MC.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="205" column="45" selection-start-line="205" selection-start-column="45" selection-end-line="205" selection-end-column="45" />
+        <state>
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/plot_psyFcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1404" />
+      </provider>
+    </entry>
+    <entry file="file:///anaconda3/lib/python3.7/site-packages/bayesfit/psyFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MC/psyphysfit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
